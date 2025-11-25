@@ -1,0 +1,22 @@
+Method Overloading in Java used to define multiple methods in the same class with the same name but different parameter lists.
+It is resolved in compiletime.
+Example Program:
+package testing;
+class calculator{
+	public int multiply(int a,int b) {
+		return a*b;
+	}
+		public double multiply(double a,double b) {
+			return a*b;			
+		}
+		}
+public class MethodOverloading {
+
+	public static void main(String[] args) {
+	calculator calci=new calculator();
+	System.out.println("Multiplication of two integers:" +calci.multiply(3,4));
+	System.out.println("Multiplication of two double value:" +calci.multiply(3.7,4.1));
+	
+	}
+
+}

@@ -1,0 +1,42 @@
+Inheritance is one of the concept in object oriented programming.It allows a class to inherit behaviours and properties from the another class using extends keyword.
+The child class inherits the fields and methods of the parent class.
+The child class can override methods from the parent class.
+Inheritance allows for creating a hierarchical class structure.
+Example Program:
+package testing;
+class person{
+	String name;
+	int age;
+	public person(String name,int age) {
+		this.name=name;
+		this.age=age;
+	}
+	public void displaydetails() {
+		System.out.println("The student Details Are:");
+		System.out.println("Name:" +name);
+		System.out.println("Age:" +age);
+	}
+}
+class Student extends person{
+int rollnumber;
+String Course;
+public Student(String name,int age,int rollnumber,String Course) {
+	super(name,age);
+	this.rollnumber=rollnumber;
+	this.Course=Course;
+	}
+public void displayStudentdetails(){
+	displaydetails();
+	System.out.println("Rollnumber:" +rollnumber);
+	System.out.println("Course:" +Course);
+	
+}
+}
+public class Inheritance {
+	public static void main(String[] args) {
+		
+		Student student=new Student("ABCD",19,123,"IT");
+		student.displayStudentdetails();
+	}
+
+}

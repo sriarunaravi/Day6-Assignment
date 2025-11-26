@@ -1,0 +1,45 @@
+Constructor Overloading is a concept in Java where a class has more than one constructor, each with a different parameter list. 
+This allows objects of the class to be initialized in different ways, depending on the arguments passed during the object creation.
+Multiple constructors can be defined within the same class.
+Each constructor must have a different parameter list.
+The constructor is invoked when an object of the class is created.
+Example:
+package testing;
+class Students{
+	String Name;
+	int age;
+	String Course;
+public Students() {
+		Name="";
+		age=0;
+		Course="";
+	}
+	public Students(String Name,int age) {
+		this.Name=Name;
+		this.age=age;
+		this.Course="NotKnown";		
+	}
+	public Students(String Name,int age,String Course) {
+		this.Name=Name;
+		this.age=age;
+		this.Course=Course;
+	}
+	public void displaydetails() {
+		System.out.println("Name:" +Name);
+		System.out.println("Age:" +age);
+		System.out.println("Course:" +Course);	
+	}
+}
+public class ConstructorOverloading {
+	public static void main(String[] args) {
+		Students student=new Students();
+		student.displaydetails();
+		System.out.println();
+		Students student1=new Students("ABCD",19);
+		student1.displaydetails();
+		System.out.println();
+		Students student2=new Students("ABCD",19,"IT");
+		student2.displaydetails();
+		System.out.println();
+	}
+}
